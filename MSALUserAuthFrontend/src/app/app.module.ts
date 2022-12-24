@@ -46,6 +46,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 ||
       cache: {
         cacheLocation: 'localStorage',
         storeAuthStateInCookie: isIE, // Set to true for Internet Explorer 11
+        secureCookies: true
       }
     }), {
       interactionType: InteractionType.Popup, // MSAL Guard Configuration
@@ -60,7 +61,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 ||
     })
   ],
   providers: [{
-    provide: HTTP_INTERCEPTORS, // MSAL Interceptor Configuration
+    provide: HTTP_INTERCEPTORS, // MSAL Interceptor added as provider here
     useClass: MsalInterceptor,
     multi: true
   },
