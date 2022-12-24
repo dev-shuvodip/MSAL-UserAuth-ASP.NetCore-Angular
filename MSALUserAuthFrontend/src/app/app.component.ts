@@ -23,7 +23,7 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'User Authentication in Angular SPA using MSAL.js 2.0 with auth code flow';
+  title = 'User Authentication in Angular SPA with ASP.Net Core Backend using MSAL.js 2.0 with auth code flow';
   isIframe = false;
   loginDisplay = false;
   private readonly _destroying$ = new Subject<void>();
